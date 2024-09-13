@@ -26,7 +26,7 @@ Installation
 
 Navigate to the project directory:
 
-        $ cd PingPong
+        $ cd PingPong/src
 
 Compile the Java files: 
 
