@@ -22,16 +22,16 @@ Enjoy the game! 🎮
 Installation
 
     Clone the repository:
-        $ git clone https://github.com/w0rtyy/ping-pong-game.git
+        $ git clone https://github.com/w0rtyy/PingPong.git
 
 Navigate to the project directory:
 
-        $ cd ping-pong-game
+        $ cd PingPong
 
 Compile the Java files: 
 
-        $ javac PingPongGame.java
+        $ javac Main.java
 
 Run the game:
 
-        $ java PingPongGame
+        $ java Main
