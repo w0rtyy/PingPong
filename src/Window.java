@@ -42,7 +42,7 @@ public class Window extends JFrame implements Runnable {
         ballRect = new Rect(Constants.SCREEN_WIDTH / 2, Constants.SCREEN_HEIGHT / 2, Constants.BALL_WIDTH, Constants.BALL_WIDTH, Constants.PADDLE_COLOR);
         ball = new Ball(ballRect, playerOne, ai, scoreText);
 
-        botController = new botController(new PlayerController(ai), ballRect, Constants.BOT_PADDLE_SPEED);
+        botController = new botController(new PlayerController(ai), ballRect);//, Constants.BOT_PADDLE_SPEED);
 
         
 
