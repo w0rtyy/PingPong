@@ -24,12 +24,6 @@ public class Window extends JFrame implements Runnable {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.addKeyListener(keyListener);
         g2 = (Graphics2D)this.getGraphics();
-        Constants.TOOLBAR_HEIGHT = this.getInsets().top;
-        Constants.TOOLBAR_WIDTH = this.getWidth();
-        Constants.INSETS_BOTTOM = this.getInsets().bottom;
-        Constants.INSETS_RIGHT = this.getInsets().right;
-        Constants.INSETS_LEFT = this.getInsets().left;
-
 
         //playerOne = new Rect(Constants.H_PADDING, Constants.SCREEN_HEIGHT - Constants.H_PADDING, Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
         playerOne = new Rect(Constants.SCREEN_WIDTH / 2 - 10, Constants.SCREEN_HEIGHT - Constants.H_PADDING, Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
