@@ -9,7 +9,7 @@ public class Window extends JFrame implements Runnable {
 
     public Graphics2D g2;
     public KeyL keyListener = new KeyL();
-    public Rect playerOne, ai, ballRect;
+    public Rect playerOne, bot, ballRect;
     public Ball ball;
     public PlayerController playerController;
     public botController botController;
@@ -35,17 +35,15 @@ public class Window extends JFrame implements Runnable {
         playerOne = new Rect(Constants.SCREEN_WIDTH / 2 - 10, Constants.SCREEN_HEIGHT - Constants.H_PADDING, Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
         playerController = new PlayerController(playerOne, keyListener);
 
-        ai = new Rect(Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.H_PADDING, 40,  Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
+        bot = new Rect(Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.H_PADDING, 40,  Constants.PADDLE_WIDTH, Constants.PADDLE_HEIGHT, Constants.PADDLE_COLOR);
         
         scoreText = new Text(0, new Font("Times New Roman", Font.PLAIN, Constants.TEXT_SIZE), Constants.TEXT_X_POS, Constants.TEXT_Y_POS);
 
         ballRect = new Rect(Constants.SCREEN_WIDTH / 2, Constants.SCREEN_HEIGHT / 2, Constants.BALL_WIDTH, Constants.BALL_WIDTH, Constants.PADDLE_COLOR);
-        ball = new Ball(ballRect, playerOne, ai, scoreText);
+        ball = new Ball(ballRect, playerOne, bot, scoreText);
 
-        botController = new botController(new PlayerController(ai), ballRect);//, Constants.BOT_PADDLE_SPEED);
-
+        botController = new botController(new PlayerController(bot), ballRect);//, Constants.BOT_PADDLE_SPEED);
         
-
     }
 
     public void update(double dt){ 
@@ -67,7 +65,7 @@ public class Window extends JFrame implements Runnable {
 
         
         playerOne.draw(g2);
-        ai.draw(g2);
+        bot.draw(g2);
         ballRect.draw(g2);
         scoreText.draw(g2);
     }
