@@ -77,8 +77,6 @@ public class Ball{
         this.rect.x += vx * dt;
         this.rect.y += vy * dt;
 
-        if(this.rect.y < 0){
-
-        }
+    
     }
 }
